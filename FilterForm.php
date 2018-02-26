@@ -30,7 +30,7 @@
 			foreach($CSS as $K => $V)
 			{
 				if(isset($this->CSS[$K]))
-					foreach($V as $K2 => $V2) $this->CSS[$K][$KV] = $V2;
+					foreach($V as $K2 => $V2) $this->CSS[$K][$K2] = $V2;
 				else
 					$this->CSS[$K] = $V;
 			}
@@ -55,7 +55,7 @@
 					<?php 
 						foreach($this->CSS as $K => $V)
 						{
-							echo $K." {"; foreach($V as $Attribute => $Value) echo $Attribute.": ".$Value.";"; echo trim($CSS)."}\n";
+							echo $K." {"; foreach($V as $Attribute => $Value) echo $Attribute.": ".$Value.";"; echo "}\n";
 						}
 					?>
 				</style>
